@@ -15,6 +15,7 @@ def fnt_selector(opcion):
     if opcion == '1':
         nombre = input('Nombre <ENTER>')
         nota = input('Nota <ENTER>')
+        fnt_registrar(nombre,nota)
 
 def fnt_registrar(nombre,nota):
     if nombre == '' or nota == '':
@@ -26,8 +27,11 @@ def fnt_registrar(nombre,nota):
 
 def fnt_menu(m):
     while m == True:
+        fnt_limpiar()
         op = input('<<< MENU PRINCIPAL >>>\
                    \n1. Registrar nota\
                    \n2. Consultar Notas\
                    \n3. Salir\n->')
+        fnt_selector(op)
 
+fnt_menu(True)
