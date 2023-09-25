@@ -16,6 +16,8 @@ def fnt_selector(opcion):
         nombre = input('Nombre <ENTER>')
         nota = input('Nota <ENTER>')
         fnt_registrar(nombre,nota)
+    if opcion == '2':
+        fnt_reporte()
 
 def fnt_registrar(nombre,nota):
     if nombre == '' or nota == '':
@@ -24,6 +26,11 @@ def fnt_registrar(nombre,nota):
         list_nombres.append(nombre)
         list_notas.append(nota)
         enter = input('Nota registrada con éxito <ENTER>') 
+
+def fnt_reporte():
+    for i in range(len(list_notas)):
+        print(list_nombres[i], ' ', list_notas[i])
+    enter = input('\n Fin del reporte <ENTER>')
 
 def fnt_menu(m):
     while m == True:
